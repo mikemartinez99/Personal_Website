@@ -82,12 +82,6 @@ About Me Section
 ----------------------------------------*/
 
 .about-me {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 10px;
-}
-
-.about-me-content {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -117,21 +111,13 @@ About Me Section
 }
 
 /*----------------------------------------
-Section Layout
+Accordion Layout
 ----------------------------------------*/
 
 .accordion {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-}
-
-.accordion-item {
-  margin: 20px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .accordion-header {
@@ -157,10 +143,11 @@ Section Layout
   overflow: hidden;
   transition: max-height 0.3s ease;
   background: #fff;
+  margin-bottom: 20px;
 }
 
-.accordion-content p,
-.accordion-content ul {
+.accordion-content ul,
+.accordion-content p {
   margin: 0;
   padding: 1rem;
 }
@@ -178,9 +165,9 @@ Section Layout
   font-style: italic;
 }
 
-/* Additional Responsive Styles */
+/* Responsive Tweaks */
 @media (max-width: 768px) {
-  .about-me-content {
+  .about-me {
       flex-direction: column;
       align-items: center;
   }
