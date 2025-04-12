@@ -1,5 +1,5 @@
 /*----------------------------------------
-  Base Styles
+Base Styles
 ----------------------------------------*/
 
 body {
@@ -43,7 +43,7 @@ i {
 }
 
 /*----------------------------------------
-  Header
+Header
 ----------------------------------------*/
 
 .top-header {
@@ -78,7 +78,7 @@ i {
 }
 
 /*----------------------------------------
-  About Me Section
+About Me Section
 ----------------------------------------*/
 
 .about-me {
@@ -90,7 +90,7 @@ i {
 .about-me-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 20px;
 }
 
@@ -100,7 +100,6 @@ i {
   line-height: 1.8;
   color: #333;
   text-align: left;
-  padding-right: 30px;
 }
 
 .about-me-image {
@@ -118,149 +117,8 @@ i {
 }
 
 /*----------------------------------------
-  Section Layout
+Section Layout
 ----------------------------------------*/
-
-.section {
-  margin-top: 3em;
-}
-
-.section-wrapper {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 40px;
-}
-
-.section-header {
-  width: 150px;
-  min-width: 140px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #00693e;
-  padding-right: 20px;
-  text-align: left;
-  text-transform: uppercase;
-  border-right: 2px solid #ddd;
-  flex-shrink: 0;
-}
-
-.section-content {
-  flex: 1;
-  padding-left: 24px;
-}
-
-.position {
-  margin-bottom: 20px;
-}
-
-/*----------------------------------------
-  Responsive Tweaks
-----------------------------------------*/
-
-@media (max-width: 768px) {
-  .section-wrapper {
-      flex-direction: column;
-  }
-
-  .section-header {
-      width: 100%;
-      border-right: none;
-      border-bottom: 2px solid #ddd;
-      margin-bottom: 10px;
-  }
-
-  .section-content {
-      padding-left: 0;
-  }
-
-  .title-location {
-      flex-direction: column;
-      gap: 4px;
-  }
-
-  .about-me-content {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .about-me-text {
-      padding-right: 0;
-  }
-
-  .about-me-image {
-      margin-top: 20px;
-  }
-}
-
-/* Add scroll snap and height control */
-body {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-}
-
-section, .about {
-  scroll-snap-align: start;
-  min-height: 100vh;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-section:nth-child(odd) {
-  background-color: #f8fafc;
-}
-
-section:nth-child(even) {
-  background-color: #ffffff;
-}
-
-/* Section fade-in animation */
-@keyframes fadeInUp {
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-/* Delay for sequential fade-ins */
-section:nth-of-type(1) { animation-delay: 0.2s; }
-section:nth-of-type(2) { animation-delay: 0.4s; }
-section:nth-of-type(3) { animation-delay: 0.6s; }
-section:nth-of-type(4) { animation-delay: 0.8s; }
-section:nth-of-type(5) { animation-delay: 1s; }
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Make header its own full-screen section too */
-header {
-  scroll-snap-align: start;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 60px 30px;
-  background: #e7f3ff;
-}
-
-/* Adjust about me so it's full height */
-.about {
-  flex-direction: row;
-  align-items: center;
-  gap: 25px;
-  margin-bottom: 0;
-  padding-left: 5px;
-}
-
-/* CSS (style.css) */
 
 .accordion {
   max-width: 1000px;
@@ -269,7 +127,7 @@ header {
 }
 
 .accordion-item {
-  margin-bottom: 20px;
+  margin: 20px 0;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
@@ -298,24 +156,36 @@ header {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  padding: 0 1rem;
   background: #fff;
 }
 
 .accordion-content p,
-.accordion-content ul,
-.accordion-content div {
-  padding: 1rem 0;
+.accordion-content ul {
   margin: 0;
+  padding: 1rem;
 }
 
-.accordion-header.active::after {
-  content: "\2212";
-  float: right;
+/* Position and date styling for bold and italic text */
+.position {
+  margin-bottom: 20px;
 }
 
-.accordion-header::after {
-  content: "\002B";
-  float: right;
-  transition: transform 0.3s ease;
+.position span {
+  font-weight: bold;
+}
+
+.date {
+  font-style: italic;
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 768px) {
+  .about-me-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .about-me-image {
+      margin-bottom: 20px;
+  }
 }
