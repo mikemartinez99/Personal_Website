@@ -82,6 +82,21 @@ Header
 }
 
 /*----------------------------------------
+DNA Logo Styling
+----------------------------------------*/
+
+.dna-logo {
+  height: 30px; /* Adjust height as needed */
+  overflow: hidden; /* Ensure visibility of the image */
+  margin-left: 12px; /* Space between the name and logo */
+}
+
+.dna-logo img {
+  height: 100%;
+  width: auto;
+}
+
+/*----------------------------------------
 About Me Section
 ----------------------------------------*/
 
