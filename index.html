@@ -105,14 +105,14 @@ document.querySelectorAll('.accordion-header').forEach(button => {
     button.addEventListener('click', () => {
         const targetId = button.getAttribute('data-target');
         const targetContent = document.querySelector(targetId);
-        
+
         // Hide all other sections
         document.querySelectorAll('.content-section').forEach(content => {
             content.style.display = 'none'; // Hide all sections
         });
 
         // Show target section
-        targetContent.style.display = 'block';
+        targetContent.style.display = 'block'; // Show the selected section
         targetContent.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 });

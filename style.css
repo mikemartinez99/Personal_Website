@@ -13,6 +13,10 @@ body {
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+}
+
 h2 {
   font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   color: #00693e; /* Dartmouth Green */
@@ -57,7 +61,6 @@ Header
 
 .top-header h1 {
   margin: 0 0 12px;
-  font-size: clamp(2.4rem, 5vw, 3.5rem);
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -118,7 +121,7 @@ Accordion and Content Sections
   width: 100%;
   text-align: left;
   padding: 1.5rem; /* Slightly increased padding */
-  background-color: #00693e;
+  background-color: #00693e; /* Dark green */
   color: white;
   font-size: 1.3rem; /* Increased font size */
   font-weight: bold;
@@ -129,16 +132,14 @@ Accordion and Content Sections
 }
 
 .accordion-header:hover {
-  background-color: #005437;
+  background-color: #005437; /* Darker green on hover */
 }
 
 .content-section {
   display: none; /* Initially hidden */
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
   background: #fff;
   margin-bottom: 20px;
+  padding: 20px;
 }
 
 .content-section ul,
