@@ -19,6 +19,9 @@
                 <i class="fab fa-linkedin"></i><a href="http://www.linkedin.com/in/michael-martinez99" target="_blank">LinkedIn</a>
             </p>
         </div>
+        <div class="dna-logo">
+            <img src="resume_img/DNA.png" />
+        </div>
     </div>
 </header>
 
@@ -33,7 +36,7 @@
     </div>
 </div>
 
-<button class="accordion-header" data-target="#education">Education</button>
+<button class="accordion-header" data-target="#education">Education <span class="caret">▼</span></button>
 <div class="content-section" id="education">
     <div class="section-content">
         <div class="position">
@@ -49,7 +52,7 @@
     </div>
 </div>
 
-<button class="accordion-header" data-target="#professional-experience">Professional Experience</button>
+<button class="accordion-header" data-target="#professional-experience">Professional Experience <span class="caret">▼</span></button>
 <div class="content-section" id="professional-experience">
     <div class="position">
         <span><strong>Research Scientist</strong>, Genomic Data Science Core – Geisel School of Medicine</span>
@@ -91,7 +94,7 @@
     </div>
 </div>
 
-<button class="accordion-header" data-target="#skills">Skills</button>
+<button class="accordion-header" data-target="#skills">Skills <span class="caret">▼</span></button>
 <div class="content-section" id="skills">
     <ul>
         <li><strong>Languages:</strong> R (Advanced), Bash, Python, Snakemake (Proficient)</li>
@@ -106,13 +109,16 @@ document.querySelectorAll('.accordion-header').forEach(button => {
         const targetId = button.getAttribute('data-target');
         const targetContent = document.querySelector(targetId);
 
-        // Hide all other sections
-        document.querySelectorAll('.content-section').forEach(content => {
-            content.style.display = 'none'; // Hide all sections
+        // Show the target section and slide down
+        const contentSections = document.querySelectorAll('.content-section');
+        contentSections.forEach(content => {
+            if (content !== targetContent) {
+                content.style.display = 'none'; // Hide all sections except the one clicked
+            }
         });
 
-        // Show target section
-        targetContent.style.display = 'block'; // Show the selected section
+        // Toggle the target section
+        targetContent.style.display = targetContent.style.display === 'block' ? 'none' : 'block';
         targetContent.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 });

@@ -51,6 +51,7 @@ Header
 ----------------------------------------*/
 
 .top-header {
+  position: relative;
   background: linear-gradient(135deg, #00693e, #00a4a6); /* Gradient */
   color: white;
   text-align: center;
@@ -78,6 +79,24 @@ Header
 
 .top-header i {
   color: #e0e0e0;
+}
+
+/*----------------------------------------
+DNA Logo Styling
+----------------------------------------*/
+
+.dna-logo {
+  position: absolute;
+  top: -50px; /* Adjust as needed */
+  right: -90px; /* Adjust as needed */
+  transform: rotate(60deg); /* Angle the logo */
+  height: 300px; /* Adjust the size */
+  overflow: visible; /* Ensure visibility of the image */
+}
+
+.dna-logo img {
+  height: 100%;
+  width: auto;
 }
 
 /*----------------------------------------
@@ -150,25 +169,4 @@ Accordion and Content Sections
 
 /* Position and date styling for bold and italic text */
 .position {
-  margin-bottom: 20px;
-}
-
-.position span {
-  font-weight: bold;
-}
-
-.date {
-  font-style: italic;
-}
-
-/* Responsive Tweaks */
-@media (max-width: 768px) {
-  .about-me {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .about-me-image {
-      margin-bottom: 20px;
-  }
-}
+  margin-bottom:
