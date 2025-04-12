@@ -1,5 +1,5 @@
 /*----------------------------------------
-  Base Styles 
+  Base Styles
 ----------------------------------------*/
 
 body {
@@ -7,19 +7,20 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #222;
-  background-color: #fff;
+  background-color: #f4f4f4;
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h2 {
-  font-size: clamp(1.4rem, 2.5vw, 1.7rem);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   color: #00693e; /* Dartmouth Green */
   text-transform: uppercase;
   font-weight: bold;
   border-bottom: 2px solid #ddd;
   padding-bottom: 5px;
-  margin: 2.5em 0 1em;
+  margin: 2em 0 1em;
 }
 
 p, ul {
@@ -29,7 +30,7 @@ p, ul {
 a {
   color: #0077b5;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 a:hover {
@@ -42,29 +43,30 @@ i {
 }
 
 /*----------------------------------------
-Header
+  Header
 ----------------------------------------*/
 
 .top-header {
-  background: linear-gradient(135deg, #00693e, #00a4a6);    color: white;
+  background: linear-gradient(135deg, #00693e, #00a4a6); /* Gradient */
+  color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
   margin-bottom: 50px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .top-header h1 {
   margin: 0 0 12px;
-  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
 .top-header a {
   color: #ffffff;
-  margin: 0 12px;
+  margin: 0 15px;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .top-header a:hover {
@@ -76,36 +78,37 @@ Header
 }
 
 /*----------------------------------------
-About Me Section
+  About Me Section
 ----------------------------------------*/
 
 .about-me {
-  max-width: 1000px;
-  margin: 30px auto;
+  max-width: 1100px;
+  margin: 40px auto;
   padding: 0 10px;
 }
 
 .about-me-content {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .about-me-text {
   flex: 1;
-  padding-right: 20px;
-  font-size: 1em;
-  line-height: 1.6;
+  font-size: 1.2em;
+  line-height: 1.8;
   color: #333;
+  text-align: left;
+  padding-right: 30px;
 }
 
 .about-me-image {
-  flex-shrink: 0;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   overflow: hidden;
   border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .about-me-image img {
@@ -115,7 +118,7 @@ About Me Section
 }
 
 /*----------------------------------------
-Section Layout
+  Section Layout
 ----------------------------------------*/
 
 .section {
@@ -129,8 +132,8 @@ Section Layout
 }
 
 .section-header {
-  width: 140px;
-  min-width: 120px;
+  width: 150px;
+  min-width: 140px;
   font-weight: bold;
   font-size: 1.1rem;
   color: #00693e;
@@ -146,8 +149,12 @@ Section Layout
   padding-left: 24px;
 }
 
+.position {
+  margin-bottom: 20px;
+}
+
 /*----------------------------------------
-Responsive Tweaks
+  Responsive Tweaks
 ----------------------------------------*/
 
 @media (max-width: 768px) {
