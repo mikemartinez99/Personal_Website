@@ -81,23 +81,7 @@ Header
   color: #e0e0e0;
 }
 
-/*----------------------------------------
-DNA Logo Styling
-----------------------------------------*/
-.dna-logo {
-  height: 100%; /* Make the logo span the full height of the header */
-  overflow: hidden; /* Ensure visibility of the image */
-  margin-left: 12px; /* Add space between the name and the logo */
-  display: flex; /* Ensure flex context for alignment */
-  align-items: stretch; 
-  justify-content: center; /* Center the image horizontally if necessary */
-}
 
-.dna-logo img {
-  height: 100%; /* Adjust height as needed to fit within the logo container */
-  width: auto; /* Maintain aspect ratio */
-  max-height: 100%; /* Ensure it doesn’t exceed the container’s height */
-}
 /*----------------------------------------
 About Me Section
 ----------------------------------------*/
