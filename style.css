@@ -111,22 +111,16 @@ About Me Section
 }
 
 /*----------------------------------------
-Accordion Layout
+Accordion and Content Sections
 ----------------------------------------*/
-
-.accordion {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
 
 .accordion-header {
   width: 100%;
   text-align: left;
-  padding: 1rem;
+  padding: 1.5rem; /* Slightly increased padding */
   background-color: #00693e;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.3rem; /* Increased font size */
   font-weight: bold;
   cursor: pointer;
   border: none;
@@ -138,7 +132,8 @@ Accordion Layout
   background-color: #005437;
 }
 
-.accordion-content {
+.content-section {
+  display: none; /* Initially hidden */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
@@ -146,8 +141,8 @@ Accordion Layout
   margin-bottom: 20px;
 }
 
-.accordion-content ul,
-.accordion-content p {
+.content-section ul,
+.content-section p {
   margin: 0;
   padding: 1rem;
 }
@@ -163,28 +158,6 @@ Accordion Layout
 
 .date {
   font-style: italic;
-}
-
-/* Nested Headers */
-.nested-header {
-  font-size: 1rem;
-  background: #d9f9d9; /* Light green */
-  cursor: pointer;
-  border: none;
-  padding: 1rem;
-  width: 100%;
-  text-align: left;
-}
-
-.nested-header:hover {
-  background: #c0e2c4; /* Darker green on hover */
-}
-
-.nested-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  background: #f9f9f9;
 }
 
 /* Responsive Tweaks */
