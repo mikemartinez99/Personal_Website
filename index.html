@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume</title>
+  <link href="style.css" rel="stylesheet">
+  <title>Michael Martinez Resume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="top-header">
+        <h1>Michael Martinez M.S.</h1>
+        <p class="bio-title">Bioinformatics Analyst - Center For Quantitative Biology</p>
+        <p class="contact-info contact-icons">
+          <i class="fa fa-envelope"></i><a href="mailto:mike.martinez99@gmail.com">mike.martinez99@gmail.com</a>
+          <i class="fab fa-github"></i><a href="https://github.com/mikemartinez99" target="_blank">GitHub</a>
+          <i class="fab fa-linkedin"></i><a href="http://www.linkedin.com/in/michael-martinez99" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <div class="about-me">
+    <h2>About Me</h2>
+    <p>I am a bioinformatics scientist with over 3 years of experience. With a passion for making sense of complex omics data and uncovering meaningful patterns, I help researchers turn hypotheses into actionable insights. My background is rooted in next-gen sequencing technologies and data analysis which has allowed me to work across a multitude of data modalities—including spatial proteomics via imaging mass cytometry, spatial transcriptomics, single-cell ATAC/RNA-Seq, bulk RNA-Seq, and metagenomics. I love collaborating with bench scientists, helping them navigate their data, teaching them that bioinformatics is not scary, and learning about their research along the way. I also have experience debugging software, troubleshooting NGS workflows, and setting up reproducible environments and workflows through conda and Snakemake. When I’m not sifting through sequencing files or surfing the command line, you’ll probably find me in the gym putting up weights or playing the drums to my favorite nu-metal songs!</p>
+  </div>
+
+  <div class="section-wrapper">
+    <div class="section-header">Education</div>
+    <div class="section-content">
+      <div class="position">
+        <div class="title-location">
+          <span>M.Sc. | University of Connecticut | Microbial Systems Analysis</span>
+        </div>
+        <div class="details">Advisors: Dr. Joerg Graf, Dr. Jonathan Klassen, Dr. Sarah Hird</div>
+        <div class="date">May 2023</div>
+      </div>
+      <div class="position">
+        <div class="title-location">
+          <span>B.S. | University of Connecticut | Molecular and Cell Biology</span>
+        </div>
+        <div class="details">Minor: Psychological Sciences</div>
+        <div class="date">May 2021</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-wrapper">
+    <div class="section-header">Professional Experience</div>
+    <div class="section-content">
+      <div class="position">
+        <div class="title-location">
+          <span>Research Scientist, Genomic Data Science Core – Geisel School of Medicine</span>
+        </div>
+        <div class="date">Oct 2014 - Present</div>
+        <div class="details">
+          <ul>
+            <li>Developed reproducible Snakemake workflows for WES and bulk ATAC-Seq, reducing data-preprocessing time and allowing for increased scalability</li>
+            <li>Supported Dartmouth researchers by developing boutique-analysis pipelines for tRNA-Seq and proprietary sequencing strategies</li>
+            <li>Analyzed a wide-range of projects for core clientele spanning Eukaryotic and prokaryotic genomics including scRNA and ATAC-seq, 10X spatial (visium and xenium), and MGX</li>
+            <li>Created an R-package, RGenEDA, to ensure reproducible exploratory data analysis and reduce analysis times</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position">
+        <div class="title-location">
+          <span>Clinical Research Technician I, Rosenberg Lab – UConn Health Center</span>
+        </div>
+        <div class="date">Jun 2023 – Sept 2024</div>
+        <div class="details">
+          <ul>
+            <li>Spearheaded the design and implementation of computational methods in R for multi-omics studies including bulk RNA-Seq, 16S amplicon sequencing, and targeted metabolomics</li>
+            <li>Utilized bash scripting on an HPC to automate bulk RNA-Seq preprocessing</li>
+            <li>Conducted a full DEG/GSEA analysis of bulk colon tissue from Pirc rats to highlight the combinatorial effect of naproxen and EPA on colon cancer chemoprevention</li>
+            <li>Analyzed colonic spatial immune architecture via multiplex imaging mass cytometry</li>
+            <li>Generated effective and publication-quality figures using R, ggplot2 to easily communicate findings</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position">
+        <div class="title-location">
+          <span>Computational Intern, R&D – Intus Biosciences</span>
+        </div>
+        <div class="date">Jun 2022 – Sept 2022</div>
+        <div class="details">
+          <ul>
+            <li>Leveraged synthetic PacBio and ONT long-reads as a standardized ground-truth input to validate and benchmark proprietary microbiome clustering software</li>
+            <li>Actively aided in pipeline development through custom R scripts to produce taxonomy-call files</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="position">
+        <div class="title-location">
+          <span>Student Researcher, Klassen Lab – UConn MCB</span>
+        </div>
+        <div class="date">Sept 2021 – May 2023</div>
+        <div class="details">
+          <ul>
+            <li>Managed LIMS database and deposition of raw sequencing reads to NCBI's SRA database</li>
+            <li>Assembled and annotated bacterial genomes using SPAdes and Prokka</li>
+            <li>Investigated fungal communities of T. septentrionalis fungus gardens in R (DADA2 and Phyloseq)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-wrapper">
+    <div class="section-header">Skills</div>
+    <div class="section-content">
+      <ul>
+        <li><strong>Comp Biology:</strong> R, Bash, Python, Snakemake, HPC, Conda/Singularity, Bioconductor, read QC/mapping/alignment</li>
+        <li><strong>Omics:</strong> Bulk RNASeq, 16S amplicon-seq, MGX, 10X (Multiome, Visium, Xenium), scRNA-Seq, scATAC-Seq, Imaging mass cytometry, metabolomics</li>
+        <li><strong>General:</strong> Statistical analysis, exploratory data analysis, clustering, dimensionality reduction (PCA, UMAP, tSNE), figure generation, biological interpretation, Microsoft Office, communication, collaboration</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
