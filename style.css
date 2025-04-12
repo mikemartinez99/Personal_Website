@@ -89,8 +89,8 @@ DNA Logo Styling
   position: absolute;
   top: -50px; /* Adjust as needed */
   right: -90px; /* Adjust as needed */
-  transform: rotate(45deg); /* Angle the logo */
-  height: 450px; /* Adjust the size */
+  transform: rotate(20deg); /* Angle the logo */
+  height: 500px; /* Adjust the size */
   overflow: visible; /* Ensure visibility of the image */
 }
 
