@@ -88,8 +88,8 @@ DNA Logo Styling
 .dna-logo {
   position: absolute;
   top: 0;
-  right: 20px; /* Distance from right */
-  height: 150px; /* Adjust height as needed */
+  right: -40px; /* Distance from right */
+  height: 350px; /* Adjust height as needed */
   overflow: visible; /* Ensure visibility of the image */
 }
 
