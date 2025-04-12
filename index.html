@@ -23,20 +23,20 @@
 </header>
 
 <div class="accordion">
-    <button class="accordion-header">About Me</button>
-    <div class="accordion-content">
+    <button class="accordion-header" data-target="#about-me">About Me</button>
+    <div class="accordion-content" id="about-me">
         <div class="about-me">
             <div class="about-me-image">
                 <img src="resume_img/me.png" alt="Michael Martinez" />
             </div>
             <div class="about-me-text">
-                <p>I am bioinformatics scientist with a passion for making sense of complex omics data and uncovering meaningful patterns that help turn hypotheses into actionable insights. My background is rooted in next-gen sequencing technologies and data analysis which has allowed me to work across a multitude of omics data modalities—including spatial proteomics via imaging mass cytometry, spatial transcriptomics, single-cell ATAC/RNA-Seq, bulk RNA-Seq, and metagenomics. I love collaborating with bench scientists, helping them navigate their data, teaching them that bioinformatics is not scary, and learning about their research along the way. I also have experience debugging software, troubleshooting NGS workflows, and setting up reproducible pipelines through workflow management languages like Snakemake. When I’m not sifting through sequencing files or surfing the command line, you’ll probably find me in the gym putting up weights or playing the drums to my favorite nu-metal songs.</p>
+                <p>I am a bioinformatics scientist with a passion for making sense of complex omics data and uncovering meaningful patterns that help turn hypotheses into actionable insights. My background is rooted in next-gen sequencing technologies and data analysis which has allowed me to work across a multitude of omics data modalities—including spatial proteomics via imaging mass cytometry, spatial transcriptomics, single-cell ATAC/RNA-Seq, bulk RNA-Seq, and metagenomics. I love collaborating with bench scientists, helping them navigate their data, teaching them that bioinformatics is not scary, and learning about their research along the way. I also have experience debugging software, troubleshooting NGS workflows, and setting up reproducible pipelines through workflow management languages like Snakemake. When I’m not sifting through sequencing files or surfing the command line, you’ll probably find me in the gym putting up weights or playing the drums to my favorite nu-metal songs.</p>
             </div>
         </div>
     </div>
 
-    <button class="accordion-header">Education</button>
-    <div class="accordion-content">
+    <button class="accordion-header" data-target="#education">Education</button>
+    <div class="accordion-content" id="education">
         <div class="section-content">
             <div class="position">
                 <span><strong>M.S.</strong> | University of Connecticut | Microbial Systems Analysis</span>
@@ -51,56 +51,62 @@
         </div>
     </div>
 
-    <button class="accordion-header">Professional Experience</button>
-    <div class="accordion-content">
-        <div class="section-content">
-            <div class="position">
-                <span><strong>Research Scientist</strong>, Genomic Data Science Core – Geisel School of Medicine</span>
+    <button class="accordion-header" data-target="#professional-experience">Professional Experience</button>
+    <div class="accordion-content" id="professional-experience">
+        <div class="position">
+            <button class="nested-header" data-target="#research-scientist">Research Scientist, Genomic Data Science Core – Geisel School of Medicine</button>
+            <div class="accordion-content nested-content" id="research-scientist">
                 <div class="date"><em>Oct 2014 - Present</em></div>
                 <ul>
-                    <li>Developed reproducible Snakemake workflows for WES and bulk ATAC-Seq, reducing data-preprocessing time and allowing for increased scalability</li>
-                    <li>Supported Dartmouth researchers by developing boutique-analysis pipelines for tRNA-Seq and proprietary sequencing strategies</li>
-                    <li>Analyzed a wide range of projects for core clientele spanning Eukaryotic and prokaryotic genomics including scRNA and ATAC-seq, 10X spatial (visium and xenium), and MGX</li>
-                    <li>Created an R-package, RGenEDA, to ensure reproducible exploratory data analysis and reduce analysis times</li>
+                    <li>Developed reproducible Snakemake workflows for WES and bulk ATAC-Seq, reducing data-preprocessing time and allowing for increased scalability.</li>
+                    <li>Supported Dartmouth researchers by developing boutique-analysis pipelines for tRNA-Seq and proprietary sequencing strategies.</li>
+                    <li>Analyzed a wide range of projects for core clientele spanning Eukaryotic and prokaryotic genomics including scRNA and ATAC-seq, 10X spatial (visium and xenium), and MGX.</li>
+                    <li>Created an R-package, RGenEDA, to ensure reproducible exploratory data analysis and reduce analysis times.</li>
                 </ul>
             </div>
-            <div class="position">
-                <span><strong>Clinical Research Technician I</strong>, Rosenberg Lab – UConn Health Center</span>
+        </div>
+        <div class="position">
+            <button class="nested-header" data-target="#clinical-research-tech">Clinical Research Technician I, Rosenberg Lab – UConn Health Center</button>
+            <div class="accordion-content nested-content" id="clinical-research-tech">
                 <div class="date"><em>Jun 2023 – Sept 2024</em></div>
                 <ul>
-                    <li>Spearheaded the design and implementation of computational methods in R for multi-omics studies including bulk RNA-Seq, 16S amplicon sequencing, and targeted metabolomics</li>
-                    <li>Utilized bash scripting on an HPC to automate bulk RNA-Seq preprocessing</li>
-                    <li>Conducted a full DEG/GSEA analysis of bulk colon tissue from Pirc rats to highlight the combinatorial effect of naproxen and EPA on colon cancer chemoprevention</li>
-                    <li>Analyzed colonic spatial immune architecture via multiplex imaging mass cytometry</li>
-                    <li>Generated effective and publication-quality figures using R, ggplot2 to easily communicate findings</li>
+                    <li>Spearheaded the design and implementation of computational methods in R for multi-omics studies including bulk RNA-Seq, 16S amplicon sequencing, and targeted metabolomics.</li>
+                    <li>Utilized bash scripting on an HPC to automate bulk RNA-Seq preprocessing.</li>
+                    <li>Conducted a full DEG/GSEA analysis of bulk colon tissue from Pirc rats to highlight the combinatorial effect of naproxen and EPA on colon cancer chemoprevention.</li>
+                    <li>Analyzed colonic spatial immune architecture via multiplex imaging mass cytometry.</li>
+                    <li>Generated effective and publication-quality figures using R, ggplot2 to easily communicate findings.</li>
                 </ul>
             </div>
-            <div class="position">
-                <span><strong>Computational R&D Intern</strong> – Intus Biosciences</span>
+        </div>
+        <div class="position">
+            <button class="nested-header" data-target="#computational-intern">Computational R&D Intern – Intus Biosciences</button>
+            <div class="accordion-content nested-content" id="computational-intern">
                 <div class="date"><em>Jun 2022 – Sept 2022</em></div>
                 <ul>
-                    <li>Leveraged synthetic PacBio and ONT long reads as a standardized, ground-truth input to validate and benchmark proprietary microbiome clustering software</li>
-                    <li>Contributed to pipeline development through a series of custom R scripts to generate taxonomy call files</li>
+                    <li>Leveraged synthetic PacBio and ONT long reads as a standardized, ground-truth input to validate and benchmark proprietary microbiome clustering software.</li>
+                    <li>Contributed to pipeline development through a series of custom R scripts to generate taxonomy call files.</li>
                 </ul>
             </div>
-            <div class="position">
-                <span><strong>Student Researcher</strong>, Klassen Lab – UConn MCB Dept.</span>
+        </div>
+        <div class="position">
+            <button class="nested-header" data-target="#student-researcher">Student Researcher, Klassen Lab – UConn MCB Dept.</button>
+            <div class="accordion-content nested-content" id="student-researcher">
                 <div class="date"><em>Sept 2021 – May 2023</em></div>
                 <ul>
-                    <li>Managed LIMs database and deposition of raw sequencing reads to NCBI's SRA database</li>
-                    <li>Assembled and annotated bacterial genomes from Illumina MiSeq reads using SPAdes and Prokka</li>
-                    <li>Investigated fungal communities of T. septentrionalis fungus gardens to highlight ant symbiotic dynamics</li>
+                    <li>Managed LIMs database and deposition of raw sequencing reads to NCBI's SRA database.</li>
+                    <li>Assembled and annotated bacterial genomes from Illumina MiSeq reads using SPAdes and Prokka.</li>
+                    <li>Investigated fungal communities of T. septentrionalis fungus gardens to highlight ant symbiotic dynamics.</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <button class="accordion-header">Skills</button>
-    <div class="accordion-content">
+    <button class="accordion-header" data-target="#skills">Skills</button>
+    <div class="accordion-content" id="skills">
         <ul>
-            <li><strong>Languages:</strong> R (Advanced), Bash, Python, Snakemake (Proficient) </li>
+            <li><strong>Languages:</strong> R (Advanced), Bash, Python, Snakemake (Proficient)</li>
             <li><strong>Omics:</strong> Bulk RNA-Seq, 16S amplicon-seq, scRNA-seq, scATAC-seq, 10X spatial transcriptomics (Visium, Xenium), spatial proteomics (imaging mass cytometry), metagenomics</li>
-            <li><strong>General:</strong> Statistical analysis, exploratory data analysis, clustering and dimensionality reduction (PCA, UMAP, tSNE), bioinformatics tools, scientific writing, customer-interfacing, figure generation, data tidying, R package development</li>
+            <li><strong>General:</strong> Statistical analysis, exploratory data analysis, clustering and dimensionality reduction (PCA, UMAP, tSNE), bioinformatics tools, scientific writing, customer interfacing, figure generation, data tidying, R package development</li>
         </ul>
     </div>
 </div>
@@ -108,19 +114,36 @@
 <script>
 document.querySelectorAll('.accordion-header').forEach(button => {
     button.addEventListener('click', () => {
-        const content = button.nextElementSibling;
-        const expanded = button.classList.toggle('active');
+        const targetId = button.getAttribute('data-target');
+        const targetContent = document.querySelector(targetId);
+        
+        // Smooth scroll to the target section
+        targetContent.scrollIntoView({ behavior: "smooth", block: "start" });
 
-        // Close all other sections
-        document.querySelectorAll('.accordion-content').forEach(c => {
-            if (c !== content) {
-                c.style.maxHeight = null;
-                c.previousElementSibling.classList.remove('active');
+        // Hide other contents
+        document.querySelectorAll('.accordion-content').forEach(content => {
+            if (content !== targetContent) {
+                content.style.maxHeight = null;
             }
         });
 
         // Toggle current section
-        content.style.maxHeight = expanded ? content.scrollHeight + 'px' : null;
+        targetContent.style.maxHeight = targetContent.style.maxHeight ? null : targetContent.scrollHeight + 'px';
+    });
+});
+
+// Handle nested headers
+document.querySelectorAll('.nested-header').forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent the parent from being triggered
+        const targetId = button.getAttribute('data-target');
+        const targetContent = document.querySelector(targetId);
+        
+        // Smooth scroll to the target section
+        targetContent.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        // Toggle nested section
+        targetContent.style.maxHeight = targetContent.style.maxHeight ? null : targetContent.scrollHeight + 'px';
     });
 });
 </script>

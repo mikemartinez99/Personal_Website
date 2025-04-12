@@ -51,7 +51,7 @@ Header
   color: white;
   text-align: center;
   padding: 50px 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -163,6 +163,28 @@ Accordion Layout
 
 .date {
   font-style: italic;
+}
+
+/* Nested Headers */
+.nested-header {
+  font-size: 1rem;
+  background: #d9f9d9; /* Light green */
+  cursor: pointer;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.nested-header:hover {
+  background: #c0e2c4; /* Darker green on hover */
+}
+
+.nested-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #f9f9f9;
 }
 
 /* Responsive Tweaks */
