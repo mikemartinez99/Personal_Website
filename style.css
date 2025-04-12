@@ -87,10 +87,10 @@ DNA Logo Styling
 
 .dna-logo {
   position: absolute;
-  top: 0;
+  top: -3;
   right: 60px; /* Distance from right */
   transform: rotate(30deg);
-  height: 400px; /* Adjust height as needed */
+  height: 370px; /* Adjust height as needed */
   overflow: visible; /* Ensure visibility of the image */
 }
 
