@@ -89,7 +89,7 @@ DNA Logo Styling
   overflow: hidden; /* Ensure visibility of the image */
   margin-left: 12px; /* Add space between the name and the logo */
   display: flex; /* Ensure flex context for alignment */
-  align-items: stretch; /* Center the image vertically */
+  align-items: stretch; 
   justify-content: center; /* Center the image horizontally if necessary */
 }
 

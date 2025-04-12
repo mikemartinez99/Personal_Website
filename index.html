@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Michael Martinez Resume</title>
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Michael Martinez Resume</title>
+<link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="top-header">
-        <div class="header-content">
-            <div class="left-side">
-                <h1>Michael Martinez M.S.</h1>
-                <p class="bio-title">Bioinformatics Analyst - Center For Quantitative Biology</p>
-                <p class="contact-info contact-icons">
-                    <i class="fa fa-envelope"></i><a href="mailto:mike.martinez99@gmail.com">mike.martinez99@gmail.com</a>
-                    <i class="fab fa-github"></i><a href="https://github.com/mikemartinez99" target="_blank">GitHub</a>
-                    <i class="fab fa-linkedin"></i><a href="http://www.linkedin.com/in/michael-martinez99" target="_blank">LinkedIn</a>
-                </p>
-            </div>
-            <div class="dna-logo">
-                <img src="resume_img/DNA.png" alt="DNA Logo" />
-            </div>
+<header class="top-header">
+    <div class="header-content">
+        <div class="left-side">
+            <h1>Michael Martinez M.S.</h1>
+            <p class="bio-title">Bioinformatics Analyst - Center For Quantitative Biology</p>
+            <p class="contact-info contact-icons">
+                <i class="fa fa-envelope"></i><a href="mailto:mike.martinez99@gmail.com">mike.martinez99@gmail.com</a>
+                <i class="fab fa-github"></i><a href="https://github.com/mikemartinez99" target="_blank">GitHub</a>
+                <i class="fab fa-linkedin"></i><a href="http://www.linkedin.com/in/michael-martinez99" target="_blank">LinkedIn</a>
+            </p>
         </div>
-    </header>
+        <div class="dna-logo">
+            <img src="resume_img/DNA.png" alt="DNA Logo" />
+        </div>
+    </div>
+</header>
 
-<div id="about-me" class="content-section">
+<!-- "About Me" section that is always present -->
+<div id="about-me" class="content-section" style="display: block;">
     <div class="about-me">
         <div class="about-me-image">
             <img src="resume_img/me.png" alt="Michael Martinez" />
@@ -104,11 +105,12 @@
 </div>
 
 <script>
+// No changes to the existing script for handling accordion behavior
 document.querySelectorAll('.accordion-header').forEach(button => {
     button.addEventListener('click', () => {
         const targetId = button.getAttribute('data-target');
         const targetContent = document.querySelector(targetId);
-
+      
         // Show the target section and slide down
         const contentSections = document.querySelectorAll('.content-section');
         contentSections.forEach(content => {
@@ -116,14 +118,14 @@ document.querySelectorAll('.accordion-header').forEach(button => {
                 content.style.display = 'none'; // Hide all sections except the one clicked
             }
         });
-
+        
         // Toggle the target section
         targetContent.style.display = targetContent.style.display === 'block' ? 'none' : 'block';
         targetContent.scrollIntoView({ behavior: "smooth", block: "start" });
     });
 });
 
-// Show the About Me section by default
+// Ensure the About Me section is always displayed
 document.getElementById('about-me').style.display = 'block';
 </script>
 </body>
