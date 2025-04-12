@@ -191,3 +191,71 @@ i {
       margin-top: 20px;
   }
 }
+
+/* Add scroll snap and height control */
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+section, .about {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+section:nth-child(odd) {
+  background-color: #f8fafc;
+}
+
+section:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Section fade-in animation */
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Delay for sequential fade-ins */
+section:nth-of-type(1) { animation-delay: 0.2s; }
+section:nth-of-type(2) { animation-delay: 0.4s; }
+section:nth-of-type(3) { animation-delay: 0.6s; }
+section:nth-of-type(4) { animation-delay: 0.8s; }
+section:nth-of-type(5) { animation-delay: 1s; }
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Make header its own full-screen section too */
+header {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 30px;
+  background: #e7f3ff;
+}
+
+/* Adjust about me so it's full height */
+.about {
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 0;
+  padding-left: 5px;
+}
