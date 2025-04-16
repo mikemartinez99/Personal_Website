@@ -10,14 +10,17 @@
 <body>
 <header class="top-header">
     <div class="header-content">
-        <div class="left-side">
-            <h1>Michael Martinez M.S.</h1>
-            <p class="bio-title">Bioinformatics Analyst - Center For Quantitative Biology</p>
-            <p class="contact-info contact-icons">
-                <i class="fa fa-envelope"></i><a href="mailto:mike.martinez99@gmail.com">mike.martinez99@gmail.com</a>
-                <i class="fab fa-github"></i><a href="https://github.com/mikemartinez99" target="_blank">GitHub</a>
-                <i class="fab fa-linkedin"></i><a href="http://www.linkedin.com/in/michael-martinez99" target="_blank">LinkedIn</a>
-            </p>
+        <!-- New image-based header -->
+        <img src="resume_img/LinkedIn_Header_Mike_Martinez.png" alt="Michael Martinez Header" class="header-img">
+
+        <!-- Contact info below image -->
+        <div class="contact-info contact-icons">
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:mike.martinez99@gmail.com">mike.martinez99@gmail.com</a>
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/mikemartinez99" target="_blank">GitHub</a>
+            <i class="fab fa-linkedin"></i>
+            <a href="http://www.linkedin.com/in/michael-martinez99" target="_blank">LinkedIn</a>
         </div>
     </div>
 </header>
@@ -102,28 +105,26 @@
 </div>
 
 <script>
-// No changes to the existing script for handling accordion behavior
-document.querySelectorAll('.accordion-header').forEach(button => {
-    button.addEventListener('click', () => {
-        const targetId = button.getAttribute('data-target');
-        const targetContent = document.querySelector(targetId);
-      
-        // Show the target section and slide down
-        const contentSections = document.querySelectorAll('.content-section');
-        contentSections.forEach(content => {
-            if (content !== targetContent) {
-                content.style.display = 'none'; // Hide all sections except the one clicked
-            }
+    document.querySelectorAll('.accordion-header').forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-target');
+            const targetContent = document.querySelector(targetId);
+    
+            // Only hide/show elements with class "content-section" EXCLUDING #about-me
+            document.querySelectorAll('.content-section').forEach(content => {
+                if (content !== targetContent && content.id !== 'about-me') {
+                    content.style.display = 'none';
+                }
+            });
+    
+            // Toggle the target content-section visibility
+            targetContent.style.display = (targetContent.style.display === 'block') ? 'none' : 'block';
+    
+            // Optional: scroll the section into view
+            targetContent.scrollIntoView({ behavior: "smooth", block: "start" });
         });
-        
-        // Toggle the target section
-        targetContent.style.display = targetContent.style.display === 'block' ? 'none' : 'block';
-        targetContent.scrollIntoView({ behavior: "smooth", block: "start" });
     });
-});
-
-// Ensure the About Me section is always displayed
-document.getElementById('about-me').style.display = 'block';
-</script>
-</body>
-</html>
+    
+    // ✅ Ensure the About Me section is always shown and uses flex layout
+    document.getElementById('about-me').style.display = 'flex';
+    </script>

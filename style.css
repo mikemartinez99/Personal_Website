@@ -52,7 +52,6 @@ Header
 
 .top-header {
   position: relative;
-  background: linear-gradient(135deg, #00693e, #00a4a6); /* Gradient */
   color: white;
   text-align: center;
   padding: 50px 20px;
@@ -81,6 +80,15 @@ Header
   color: #e0e0e0;
 }
 
+.contact-info i {
+  color: #00693e; /* Dartmouth green */
+  transition: color 0.3s ease;
+}
+
+.contact-info i:hover {
+  color: #004f2d; /* Darker green on hover */
+}
+
 
 /*----------------------------------------
 About Me Section
@@ -90,7 +98,12 @@ About Me Section
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
   gap: 20px;
+}
+
+.about-me {
+  display: flex !important;
 }
 
 .about-me-text {
@@ -135,6 +148,33 @@ Accordion and Content Sections
 
 .accordion-header:hover {
   background-color: #005437; /* Darker green on hover */
+}
+
+.header-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.contact-info {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-icons i {
+  margin: 0 0.5rem;
+}
+
+.contact-info a {
+  margin: 0 0.75rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
 
 .content-section {
