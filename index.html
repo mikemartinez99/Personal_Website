@@ -22,6 +22,11 @@
             <i class="fab fa-linkedin"></i>
             <a href="http://www.linkedin.com/in/michael-martinez99" target="_blank">LinkedIn</a>
         </div>
+        <nav class="section-nav">
+            <button class="nav-button" data-target="#education">Education</button>
+            <button class="nav-button" data-target="#professional-experience">Professional Experience</button>
+            <button class="nav-button" data-target="#skills">Skills</button>
+          </nav>
     </div>
 </header>
 
@@ -105,26 +110,28 @@
 </div>
 
 <script>
-    document.querySelectorAll('.accordion-header').forEach(button => {
+    // Shared toggling function
+    function toggleSection(targetId) {
+        document.querySelectorAll('.content-section').forEach(section => {
+            if (section.id !== 'about-me') {
+                section.style.display = (section.id === targetId.replace('#', '')) ? 'block' : 'none';
+            }
+        });
+
+        const targetContent = document.querySelector(targetId);
+        if (targetContent) {
+            targetContent.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }
+
+    // Add event listeners to both nav buttons and accordion headers
+    document.querySelectorAll('.accordion-header, .nav-button').forEach(button => {
         button.addEventListener('click', () => {
             const targetId = button.getAttribute('data-target');
-            const targetContent = document.querySelector(targetId);
-    
-            // Only hide/show elements with class "content-section" EXCLUDING #about-me
-            document.querySelectorAll('.content-section').forEach(content => {
-                if (content !== targetContent && content.id !== 'about-me') {
-                    content.style.display = 'none';
-                }
-            });
-    
-            // Toggle the target content-section visibility
-            targetContent.style.display = (targetContent.style.display === 'block') ? 'none' : 'block';
-    
-            // Optional: scroll the section into view
-            targetContent.scrollIntoView({ behavior: "smooth", block: "start" });
+            toggleSection(targetId);
         });
     });
-    
-    // ✅ Ensure the About Me section is always shown and uses flex layout
+
+    // Ensure About Me section always visible and in flex
     document.getElementById('about-me').style.display = 'flex';
-    </script>
+</script>
