@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Portfolio</title>
+</head>
+<body>
+  <div class="header-banner-wrap">
+    <img src="resume_img/LinkedIn_Header_Mike_Martinez.png" alt="Header Logo" class="header-banner">
+    <nav class="banner-navbar">
+      <div class="right">
+        <a href="https://github.com/mikemartinez99" target="_blank">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="http://www.linkedin.com/in/michael-martinez99" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="mailto:mike.martinez99@gmail.com" target="_blank">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- SECTION NAVIGATION -->
+  <nav class="section-nav">
+    <a href="#tech-stack">Tech Stack</a>
+    <a href="#projects">Highlighted Projects</a>
+    <a href="#Experience">Experience</a>
+    <a href="#Education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <!-- SECTION 1: Hero -->
+    <section class="hero-section">
+      <div class="text">
+        <h2>Hi, I'm Mike 👋</h2>
+        <p>I am a bioinformatics scientist with a passion for making sense of complex omics data and uncovering meaningful patterns that help turn hypotheses into actionable insights. My background is rooted in next-gen sequencing technologies and data analysis which has allowed me to work across a multitude of omics data modalities—including spatial proteomics via imaging mass cytometry, spatial transcriptomics, single-cell ATAC/RNA-Seq, bulk RNA-Seq, and metagenomics. I love collaborating with bench scientists, helping them navigate their data, teaching them that bioinformatics is not scary, and learning about their research along the way. I also have experience debugging software, troubleshooting NGS workflows, and setting up reproducible pipelines through workflow management languages like Snakemake. When I'm not sifting through sequencing files or surfing the command line, you'll probably find me in the gym putting up weights or playing the drums to my favorite nu-metal songs.</p>
+      </div>
+
+      <div class="headshot">
+        <img src="resume_img/me_new.png" alt="Mike Martinez headshot">
+      </div>
+    </section>
+
+    <!-- SECTION 2: Skills -->
+    <section id="Tech Stack" class="skills-section">
+      <h2> Tech Stack</h2>
+      <div class="text">
+        R and Snakemake are my daily drivers, but I also code with comfort in bash, python. I love building modular tools for reproducible workflows and analyses, and generating easy to interpret reports! 
+      </div>
+
+      <div class="cells">
+        <div class="cell">
+          <img src="resume_img/R_logo.jpeg" alt="R logo">
+          <span>R</span>
+        </div>
+        
+        <div class="cell">
+          <img src="resume_img/Snakemake_logo.png" alt="Snakemake logo">
+          <span>Snakemake</span>
+        </div>
+        
+        <div class="cell">
+          <img src="resume_img/bash_logo.png" alt="bash logo">
+          <span>Bash</span>
+        </div>
+        
+        <div class="cell">
+          <img src="resume_img/python_logo.png" alt="node logo">
+          <span>Python</span>
+        </div>
+        
+      </div>
+    </section>
+
+
+    </section>
+
+    <!-- SECTION 2.5: Projects -->
+    <section id="projects" class="projects-section">
+      <h2>Highlighted Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <div class="project-image">
+            <img src="resume_img/RGen_EDA.png" alt="Project 1 image">
+          </div>
+          <h3>RGenEDA (R Package)</h3>
+          <p>Conduct exploratory data analysis on your genomic data and plot diagnostic images to assess major drivers of variation and gene expression changes with ease!</p>
+        </div>
+        <div class="project">
+          <div class="project-image">
+            <img src="resume_img/SCOutR.png" alt="Project 1 image">
+          </div>
+          <h3>SCOutR (R Package)</h3>
+          <p>A collection of utility and plotting functions to streamline the processing of single-cell omics data (supports scRNA, scATAC, 10X multiome, and Visium)</p>
+        </div>
+        <div class="project">
+          <div class="project-image">
+            <img src="resume_img/CloverSeq.png" alt="Project 1 image">
+          </div>
+          <h3>Clover-Seq</h3>
+          <p>Modular Snakemake workflows for the comprehensive analyses of mature tRNAs and other small RNAs (smRNAs) from high-throughput sequencing data.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Testimony -->
+    <section id="Experience" class="testimony-section">
+      <h2>Experience</h2>
+
+      <!-- Geisel -->
+      <div class="group">
+        <div class="person-details">
+          <img src="resume_img/Geisel.png">
+          <p>Research Scientist</p>
+          <div class="date"><em>Oct 2024 - Present</em></div>
+        </div>
+        <div class="text">
+          <p><strong>Geisel School of Medicine at Dartmouth - Center for Quantitative Biology</strong></p>
+            <li>Developed reproducible Snakemake workflows for WES and bulk ATAC-Seq, reducing data-preprocessing time and allowing for increased scalability.</li>
+            <li>Supported Dartmouth researchers by developing boutique-analysis pipelines for tRNA-Seq and proprietary sequencing strategies.</li>
+            <li>Analyzed a wide range of projects for core clientele spanning Eukaryotic and prokaryotic genomics including scRNA and ATAC-seq, 10X spatial (visium and xenium), and MGX.</li>
+            <li>Created an R-package, RGenEDA, to ensure reproducible exploratory data analysis and reduce analysis times.</li>
+          </ul>
+        </div>
+      </div>
+
+    <!-- UCHC -->
+    <div class="group">
+      <div class="person-details">
+        <img src="resume_img/UCHC.jpeg">
+        <p>Clinical Research Technician I</p>
+        <div class="date"><em>Jun 2023 – Sept 2024</em></div>
+      </div>
+      <div class="text">
+          <p><strong>UConn Health Center - Department of Molecular Oncology</strong></p>
+
+          <li>Spearheaded the design and implementation of computational methods in R for multi-omics studies including bulk RNA-Seq, 16S amplicon sequencing, and targeted metabolomics.</li>
+          <li>Utilized bash scripting on an HPC to automate bulk RNA-Seq preprocessing.</li>
+          <li>Conducted a full DEG/GSEA analysis of bulk colon tissue from Pirc rats to highlight the combinatorial effect of naproxen and EPA on colon cancer chemoprevention.</li>
+          <li>Analyzed colonic spatial immune architecture via multiplex imaging mass cytometry.</li>
+          <li>Generated effective and publication-quality figures using R, ggplot2 to easily communicate findings.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Intus -->
+    <div class="group">
+      <div class="person-details">
+        <img src="resume_img/Intus_logo.jpeg">
+        <p>Bioinformatics R&D Intern</p>
+        <div class="date"><em>Jun 2022 – Sept 2022</em></div>
+      </div>
+      <div class="text">
+        <p><strong>Intus Biosciences</strong></p>
+        <li>Leveraged synthetic PacBio and ONT long reads as a standardized, ground-truth input to validate and benchmark proprietary microbiome clustering software.</li>
+          <li>Contributed to pipeline development through a series of custom R scripts to generate taxonomy call files.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Klassen -->
+    <div class="group">
+      <div class="person-details">
+        <img src="resume_img/UConn.png">
+        <p>Student Researcher</p>
+        <div class="date"><em>Sept 2021 – May 2023</em></div>
+      </div>
+      <div class="text">
+        <p><strong>Jonathan Klassen Lab (UConn MCB Dept.)</strong></p>
+        <li>Managed LIMs database and deposition of raw sequencing reads to NCBI's SRA database.</li>
+          <li>Assembled and annotated bacterial genomes from Illumina MiSeq reads using SPAdes and Prokka.</li>
+          <li>Investigated fungal communities of T. septentrionalis fungus gardens to highlight ant symbiotic dynamics.</li>
+        </ul>
+      </div>
+    </div>
+    </section>
+
+    <!-- SECTION 3: Education -->
+    <section id="Education" class="education-section">
+      <h2>Education</h2>
+
+      <!-- Grad -->
+      <div class="group">
+        <div class="person-details">
+          <span><strong>M.S.</strong> | University of Connecticut | Microbial Systems Analysis</span>
+            <div class="details">Advisors: Dr. Joerg Graf, Dr. Jonathan Klassen, Dr. Sarah Hird</div>
+            <div class="date"><em>May 2023</em></div>
+        </div>
+      </div>
+
+      <!-- Undergrad -->
+      <div class="group">
+        <div class="person-details">
+          <span><strong>B.S.</strong> | University of Connecticut | Molecular and Cell Biology</span>
+            <div class="details">Minor: Psychological Sciences</div>
+            <div class="date"><em>May 2021</em></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Contact -->
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+
+      <div class="group">
+        <div class="text">
+          If you have any questions or would like to collaborate together, please email me!
+        </div>
+        <div class="text">
+
+        </div>
+
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email">
+
+          <label for="message">Message</label>
+          <textarea id="message" cols="30" rows="10"></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
